@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  .slider-frame {
+    text-align: center;
+    margin: 30px auto 0;  /* Centrar horizontalmente */
+    max-width: 77.77%; /* Ajusta este valor según tus necesidades */
+    max-height: 400px;
+    overflow: hidden;
+  }
+  
+  .slider-frame ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: slide 10s infinite ;
+  }
+  
+  .slider-frame li {
+    flex: 0 0 100%; /* Ocupar todo el ancho del slider */
+    padding: 0;
+  }
+  
+  .slider-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+  @keyframes slide {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+  }
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Color de fondo para el menú */
+    z-index: 1000; /* Valor alto para asegurar que el menú esté en la parte superior */
+  }
+  .toggle-menu {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    filter: invert(1);
+    width: 40px;
+    z-index: 1;
+    display: block;
+  }
+  
+  .toggle-menu__checkbox {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    width: 40px;
+    opacity: 0;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+  }
+  
+  .toggle-menu__checkbox:checked + .main-menu {
+    transform: translate(0);
+  }
+  
+  /* Menú Principal */
+  .main-menu--show {
+    transform: translateY(0);
+  }
+  
+  .main-menu {
+    
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color);
+    transition: transform 0.3s;
+    transform: translateY(-100%);
+  }
+  
+  .main-menu__item {
+    padding: 1em;
+  }
+  
+  .main-menu__link {
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  /* Menú Tableta/Escritorio */
+  @media (min-width: 760px) {
+    .toggle-menu {
+        display: none;
+    }
+  
+    .main-menu {
+        flex-direction: row;
+        transform: translateY(0);
+    }
+}
+.reproducir-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Estilos al pasar el mouse por encima */
+.reproducir-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos al hacer clic */
+.reproducir-button:active {
+    background-color: #003d80;
+}
+
+/* Ajustar el tamaño del ícono */
+.reproducir-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Centrar el ícono verticalmente */
+.reproducir-button svg {
+    vertical-align: middle;
+}
+.imagenes{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap:10%;
+}
+@media screen and (max-width: 900px) {
+  .ref a:not(:first-child) {
+      display: none;
+  }
+  .ref a.icon {
+      display: block;
+  }
+  .ref.responsive {
+      position: relative;
+  }
+  .ref.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+  .ref.responsive a {
+      display: block;
+      text-align: center;
+}
+}
+.inicio{
+    min-height: 100%;
+
+}
+.contenedor{
+    position: relative;
+    display: inline-block;
+}
+.contenedor__img{
+    width: 100%;
+}
+.imagen-texto{
+    position: absolute;
+    top: 10px;
+    left: 10%;
+
+}
+.contenedor1{
+  flex-direction: column;
+  background-color: red;
+}
