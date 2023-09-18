@@ -194,6 +194,7 @@ body {
   margin-bottom: 5%;
 }
 .contenedor__img{
+  padding: 10;
   max-width: 100%;
   object-fit: cover;
   max-height: 100%;
@@ -267,7 +268,7 @@ section {
   justify-content: center;
 }
 
-article {
+/* article {
   width: 300px;
   margin: 20px;
   padding: 10px;
@@ -276,8 +277,8 @@ article {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   max-height: 350px;
-  overflow: hidden; /* Agregamos overflow: hidden; para ocultar el contenido que se desborda */
-}
+  overflow: hidden; 
+} */
 
 
 h2,
